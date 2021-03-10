@@ -20,6 +20,7 @@ services:
     build: .
     environment:
        - GP_NODE=master
+       - HOSTFILE=multihost
     hostname: db_master_1
     command: tail -f /dev/null
     volumes:
