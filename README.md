@@ -5,19 +5,19 @@ originally taken from (https://github.com/chad-ongstad/greenplum-docker) - chang
 
 
 ## Build
-docker build -t ubuntu_gpdb .
 
+```make build-image```
+  
 
-## Quick start with multi Node Docker-Compose 
-From the command line execute the following command: docker-compose up
+## Run
+```make run```
 
-You can connect to your host using PGADMIN on port 5432 user/pass is gpadmin/dataroad or via the Docker Desktop UI
-
-###  gpinitsys
-Configuration file for setting up the greenplum cluster.
+## Connect
+```make conn```, password: ```dataroad```
 
 
 ## Clean-up 
-used to clean the volumes used by the gpdbs
+```
 
-
+sh cleanup.sh
+```

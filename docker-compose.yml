@@ -1,7 +1,7 @@
 version: "3"
 services:
   db_seg_1:
-    build: .
+    image: ubuntu_gpdb:latest
     environment:
        - GP_NODE=segment
     hostname: db_seg_1
@@ -9,7 +9,7 @@ services:
     volumes:
       - db_seg_1:/var/lib/gpdb/
   db_seg_2:
-    build: .
+    image: ubuntu_gpdb:latest
     environment:
        - GP_NODE=segment
     hostname: db_seg_2
@@ -17,7 +17,7 @@ services:
     volumes:
       - db_seg_2:/var/lib/gpdb/
   db_master_1:
-    build: .
+    image: ubuntu_gpdb:latest
     environment:
        - GP_NODE=master
        - HOSTFILE=multihost
